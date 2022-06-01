@@ -3,7 +3,6 @@ import { Text, StyleSheet, View, ScrollView, StatusBar } from "react-native";
 import { useIsFocused } from "@react-navigation/native";
 import { Fab, Icon } from "native-base";
 import Todo from "./Todo";
-import LottieView from "lottie-react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Ionicons, FontAwesome, AntDesign } from "@expo/vector-icons";
 
@@ -72,11 +71,6 @@ const Home = ({ navigation }) => {
         return (
             <View style={styles.loadingContainer}>
                 <Text style={styles.loadingtext}>loading ...</Text>
-                <LottieView
-                    source={require("../assets/todo.json")}
-                    autoPlay
-                    loop
-                />
             </View>
         );
     } else {
